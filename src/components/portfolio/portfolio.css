@@ -1,0 +1,140 @@
+.work__filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+
+.work__item {
+    cursor: pointer;
+    font-size: var(--font-medium);
+    transition: .3s;
+}
+
+.work__item:hover {
+    color: var(--title-color);
+}
+
+.work__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 3px 2px #dfdfdf;
+
+}
+
+.work__mask {
+    background-color: rgb(216, 216, 216);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.work__card:hover .work__mask {
+    opacity: 0.9;
+}
+
+.work__category {
+    color: white;
+    background-color: #f1ac20;
+    border-bottom-left-radius: 0.98rem;
+    border-top-right-radius: 0.98rem;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    font-size: var(--font-medium);
+    display: inline-block;
+    padding: 0.19rem 0.625rem;
+    transform: translateY(-40px);
+    transition: 0.3s;
+}
+
+.work__title {
+    color: var(--title-color);
+    font-size: var(--font-medium);
+    margin: 0 0 0.98rem;
+    padding: 0 1.25rem;
+    position: absolute;
+    top: 3.75rem;
+    transform: translateY(30px);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+
+.work__buttons {
+    position: absolute;
+    bottom: 0.1rem;
+    left: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.work__button {
+    color: white;
+    background-color: #f1ac20;
+    border-bottom-left-radius: 0.98rem;
+    border-top-right-radius: 0.98rem;
+    /* height: 40px;
+    width: 40px;
+    border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.work__card:hover .work__buttons {
+    opacity: 1;
+}
+
+.work__card:hover .work__title,
+.work__card:hover .work__category {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .work__container {
+        grid-template-columns: max-content;
+        row-gap: 2rem;
+        padding: 20px;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .work__container {
+        grid-template-columns: 2fr;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .work__container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+/* For small devices */
+/* @media screen and (max-width: 350px) {
+    
+  } */
